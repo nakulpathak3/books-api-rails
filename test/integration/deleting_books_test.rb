@@ -7,7 +7,7 @@ class DeletingBooksTest < ActionDispatch::IntegrationTest
   end
 
   test "delete books" do
-    delete "/books/#{@book.id}"
+    delete "/api/books/#{@book.id}"
 
     assert_equal 204, response.status # No body needs to be sent
 
