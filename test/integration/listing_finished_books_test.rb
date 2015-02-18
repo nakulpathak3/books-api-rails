@@ -12,8 +12,8 @@ class ListingFinishedBooksTest < ActionDispatch::IntegrationTest
 
     assert_equal 200, response.status
     assert_equal Mime::JSON, response.content_type
-
-    assert_equal 1,json(response.body).size
+    # byebug
+    assert_equal 1, json(response.body)[:finished_books].size
   end
 
   test "List finished books in xml" do
